@@ -27,8 +27,7 @@ export class OpenService {
         from_who: result.data.from_who,
         commit_from: result.data.commit_from,
       };
-
-      await this.redisService.set('sentence', JSON.stringify(data));
+      await this.redisService.setex('sentence', 86400, JSON.stringify(data));
     }
 
     return data;
