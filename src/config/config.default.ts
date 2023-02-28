@@ -6,4 +6,12 @@ export default {
   koa: {
     port: 7001,
   },
+  redis: {
+    client: {
+      port: 21517,
+      host: 'www.chkai.cn',
+      password: 'c@kai123..',
+      db: 0,
+    },
+  },
 } as MidwayConfig;
